@@ -16,7 +16,7 @@ const ForgetPassword = () => {
             toast("Password reset email sent and check your email")
         })
         .catch(error=>{
-            console(error.message);
+            setError(error.message);
 
         })
         e.target.reset();

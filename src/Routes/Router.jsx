@@ -2,6 +2,10 @@ import { createBrowserRouter } from "react-router";
 import Root from "../Components/Root/Root";
 import Home from "../Pages/Home/Home";
 import PlantDetails from "../Components/PlantDetails/PlantDetails";
+import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register/Register";
+import ForgetPassword from "../Pages/ForgetPassword/ForgetPassword";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -30,8 +34,22 @@ export const router = createBrowserRouter([
       {
         path: '/plant/:id',
         loader: ()=>fetch('/plants.json'),
-        Component: PlantDetails,
+        element: <PrivateRoute>
+          <PlantDetails></PlantDetails>
+        </PrivateRoute>,
         hydrateFallbackElement: <p>Loading...</p>
+      },
+      {
+        path: "/login",
+        Component: Login
+      },
+      {
+        path: "/register",
+        Component: Register
+      },
+      {
+        path: "/forgetpass",
+        Component: ForgetPassword
       }
     ],
   },

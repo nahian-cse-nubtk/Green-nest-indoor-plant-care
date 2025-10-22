@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const Consultation = () => {
     const handleSubmit=(e)=>{
@@ -7,9 +8,10 @@ const Consultation = () => {
         const name = e.target.name.value;
         console.log(name,email);
         e.target.reset();
+        toast("Booking Successfull")
     }
     return (
-        <div className="hero bg-base-200 ">
+        <div className="  ">
 
   <div className="hero-content flex-col lg:flex-row-reverse">
     {/* <div className="text-center lg:text-left">

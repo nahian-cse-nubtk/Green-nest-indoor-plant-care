@@ -1,0 +1,72 @@
+[
+  {
+    "plantId": 1,
+    "plantName": "Snake Plant",
+    "watering": "Water once every 2-3 weeks. Avoid overwatering.",
+    "sunlight": "Thrives in low to bright indirect light.",
+    "fertilizing": "Feed once a month during spring and summer with a balanced houseplant fertilizer."
+  },
+  {
+    "plantId": 2,
+    "plantName": "Peace Lily",
+    "watering": "Keep soil consistently moist but not soggy. Water when top inch is dry.",
+    "sunlight": "Bright indirect light is ideal; can tolerate low light.",
+    "fertilizing": "Fertilize every 6-8 weeks with a diluted liquid fertilizer during growing season."
+  },
+  {
+    "plantId": 3,
+    "plantName": "Aloe Vera",
+    "watering": "Water every 3 weeks. Allow soil to dry completely between watering.",
+    "sunlight": "Prefers bright, indirect sunlight or partial shade.",
+    "fertilizing": "Fertilize sparingly, 2-3 times a year with succulent fertilizer."
+  },
+  {
+    "plantId": 4,
+    "plantName": "Monstera Deliciosa",
+    "watering": "Water when top 2 inches of soil are dry.",
+    "sunlight": "Bright indirect light; avoid direct sun to prevent leaf burn.",
+    "fertilizing": "Feed monthly with a balanced liquid fertilizer during spring and summer."
+  },
+  {
+    "plantId": 5,
+    "plantName": "Spider Plant",
+    "watering": "Water once a week; allow soil to dry slightly between waterings.",
+    "sunlight": "Prefers bright, indirect light.",
+    "fertilizing": "Fertilize every 2-4 weeks during the growing season with a balanced fertilizer."
+  },
+  {
+    "plantId": 6,
+    "plantName": "ZZ Plant",
+    "watering": "Water every 2-3 weeks; drought tolerant.",
+    "sunlight": "Can tolerate low light, but grows faster in bright indirect light.",
+    "fertilizing": "Fertilize monthly during growing season with a diluted liquid fertilizer."
+  },
+  {
+    "plantId": 7,
+    "plantName": "Rubber Plant",
+    "watering": "Water when the top inch of soil dries out.",
+    "sunlight": "Bright indirect light is best; can tolerate some direct sun.",
+    "fertilizing": "Feed every 4-6 weeks in spring and summer with a balanced fertilizer."
+  },
+  {
+    "plantId": 8,
+    "plantName": "Jade Plant",
+    "watering": "Water when soil is dry; avoid waterlogging.",
+    "sunlight": "Requires bright, direct sunlight for best growth.",
+    "fertilizing": "Fertilize once a month during spring and summer with cactus or succulent fertilizer."
+  },
+  {
+    "plantId": 9,
+    "plantName": "Pothos (Money Plant)",
+    "watering": "Water when top 1-2 inches of soil is dry.",
+    "sunlight": "Thrives in low to bright indirect light.",
+    "fertilizing": "Fertilize every 2 months with balanced houseplant fertilizer."
+  },
+  {
+    "plantId": 10,
+    "plantName": "Boston Fern",
+    "watering": "Keep soil consistently moist, but not soggy.",
+    "sunlight": "Bright indirect light; avoid direct sunlight.",
+    "fertilizing": "Feed every 4-6 weeks during growing season with a balanced liquid fertilizer."
+  }
+]

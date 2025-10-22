@@ -1,0 +1,21 @@
+[
+  {
+    "expertId": 1,
+    "name": "Carol Klein",
+    "specialization": "English gardening expert, television presenter, and newspaper columnist",
+    "image": "https://i.ibb.co.com/1t8bfqfn/carol.jpg"
+  },
+  {
+    "expertId": 2,
+    "name": "Sarah Gurr",
+    "specialization": "Plant pathologist and academic specializing in fungal diseases in plants",
+    "image": "https://i.ibb.co.com/7x2PMPNq/sarah.png"
+  },
+  {
+    "expertId": 3,
+    "name": "Christine Beveridge",
+    "specialization": "Plant physiologist focusing on shoot architecture and plant development",
+    "image": "https://i.ibb.co.com/KcwKY3BV/christine.jpg"
+  }
+
+]

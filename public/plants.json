@@ -1,0 +1,122 @@
+[
+  {
+    "plantId": 1,
+    "plantName": "Snake Plant",
+    "category": "Air Purifier",
+    "price": 18,
+    "rating": 4.8,
+    "availableStock": 10,
+    "careLevel": "Easy",
+    "description": "The Snake Plant is a symbol of resilience — thriving even with minimal care. Its tall, sword-like leaves filter toxins and improve air quality. Perfect for bedrooms and offices, it brings elegance and clean air together in one hardy plant.",
+    "image": "https://i.ibb.co.com/vpdZSPS/fiddle.jpg",
+    "providerName": "UrbanGreen Studio"
+  },
+  {
+    "plantId": 2,
+    "plantName": "Peace Lily",
+    "category": "Flowering Plant",
+    "price": 22,
+    "rating": 4.7,
+    "availableStock": 15,
+    "careLevel": "Medium",
+    "description": "With its graceful white blooms and lush green leaves, the Peace Lily adds serenity to any room. It helps remove indoor pollutants while requiring little sunlight. A natural purifier and a symbol of tranquility, it brightens your living space effortlessly.",
+    "image": "https://i.ibb.co.com/2YST9Trt/Spider.jpg",
+    "providerName": "GreenAura Botanicals"
+  },
+  {
+    "plantId": 3,
+    "plantName": "Aloe Vera",
+    "category": "Succulent",
+    "price": 15,
+    "rating": 4.9,
+    "availableStock": 20,
+    "careLevel": "Easy",
+    "description": "Aloe Vera is both a healer and a beauty. Its fleshy leaves store soothing gel known for skincare and health benefits. Low maintenance and sun-loving, it’s the perfect green companion for desks, windowsills, or sunny corners.",
+    "image": "https://i.ibb.co.com/Zzq3TkZK/Alovera.jpg",
+    "providerName": "Leaf & Life"
+  },
+  {
+    "plantId": 4,
+    "plantName": "Monstera Deliciosa",
+    "category": "Tropical Plant",
+    "price": 35,
+    "rating": 4.9,
+    "availableStock": 8,
+    "careLevel": "Medium",
+    "description": "Known for its dramatic split leaves, Monstera Deliciosa is a showstopper in modern interiors. It loves bright, indirect light and gives a tropical vibe instantly. A true favorite among plant enthusiasts for its beauty and personality.",
+    "image": "https://i.ibb.co.com/9HPFpwRH/monstera.jpg",
+    "providerName": "BotaniCo"
+  },
+  {
+    "plantId": 5,
+    "plantName": "Spider Plant",
+    "category": "Air Purifier",
+    "price": 17,
+    "rating": 4.6,
+    "availableStock": 25,
+    "careLevel": "Easy",
+    "description": "The Spider Plant grows quickly, producing graceful arching leaves and baby offshoots. It’s one of the best natural air purifiers, perfect for hanging pots or desks. Easy to grow and endlessly rewarding, it thrives even in indirect light.",
+    "image": "https://i.ibb.co.com/2YST9Trt/Spider.jpg",
+    "providerName": "Urban Sprout"
+  },
+  {
+    "plantId": 6,
+    "plantName": "ZZ Plant",
+    "category": "Low Light",
+    "price": 28,
+    "rating": 4.8,
+    "availableStock": 12,
+    "careLevel": "Easy",
+    "description": "Glossy, dark-green leaves make the ZZ Plant a modern favorite for home or office. It tolerates low light, irregular watering, and general neglect. A perfect choice for beginners who want greenery without the fuss.",
+    "image": "https://i.ibb.co.com/k279VSNv/ZZ.jpg",
+    "providerName": "EverBloom Studio"
+  },
+  {
+    "plantId": 7,
+    "plantName": "Jade Plant",
+    "category": "Succulent",
+    "price": 20,
+    "rating": 4.5,
+    "availableStock": 18,
+    "careLevel": "Easy",
+    "description": "Often called the 'money plant' of good fortune, the Jade Plant brings positivity and charm. Its plump, shiny leaves store water, making it drought-tolerant. Place it in sunlight and watch it thrive for years as a symbol of prosperity.",
+    "image": "https://i.ibb.co.com/MxmGJmMV/jade-plant.jpg",
+    "providerName": "BloomNest"
+  },
+  {
+    "plantId": 8,
+    "plantName": "Areca Palm",
+    "category": "Indoor Palm",
+    "price": 40,
+    "rating": 4.9,
+    "availableStock": 7,
+    "careLevel": "Medium",
+    "description": "The Areca Palm is a natural humidifier and one of the best plants for purifying air. With its feathery green fronds, it creates a tropical feel indoors. It loves indirect light and regular watering to keep its lush look alive.",
+    "image": "https://i.ibb.co.com/v6zfhC4K/Areca.jpg",
+    "providerName": "PalmHouse"
+  },
+  {
+    "plantId": 9,
+    "plantName": "Fiddle Leaf Fig",
+    "category": "Indoor Tree",
+    "price": 45,
+    "rating": 4.7,
+    "availableStock": 5,
+    "careLevel": "Hard",
+    "description": "The Fiddle Leaf Fig is a bold, sculptural plant with large violin-shaped leaves. It’s the centerpiece of any living room, demanding light and love. Though slightly fussy, its striking appearance is worth every bit of attention.",
+    "image": "https://i.ibb.co.com/vpdZSPS/fiddle.jpg",
+    "providerName": "LeafLuxe"
+  },
+  {
+    "plantId": 10,
+    "plantName": "Anthurium",
+    "category": "Flowering Plant",
+    "price": 32,
+    "rating": 4.8,
+    "availableStock": 8,
+    "careLevel": "Medium",
+    "description": "With glossy green leaves and bright red waxy blooms, the Anthurium adds instant vibrance. It blooms almost all year if cared for with moderate light and humidity. A perfect accent plant to bring color and charm indoors.",
+    "image": "https://i.ibb.co.com/B5phk2vj/Anthurium.jpg",
+    "providerName": "BloomArt"
+  }
+]

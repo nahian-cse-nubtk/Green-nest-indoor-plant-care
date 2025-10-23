@@ -20,7 +20,7 @@ const UserDropdown = ({ user, handleLogout }) => {
   //if (!user) return null; // if no user logged in, don't show dropdown
 
   return (
-    <div className="relative inline-block text-left ml-10">
+    <div className="relative inline-block text-left ml-10 ">
       {/* Avatar + Name */}
       <button
         onClick={() => setOpen(!open)}

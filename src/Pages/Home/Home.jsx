@@ -11,7 +11,7 @@ const Home = () => {
 
     //console.log(plants);
     return (
-        <div>
+        <div className='bg-green-50'>
             <div className='p-8'>
                 <PlantSlider plants={plants}></PlantSlider>
             </div>

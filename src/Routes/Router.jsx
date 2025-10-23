@@ -8,6 +8,7 @@ import ForgetPassword from "../Pages/ForgetPassword/ForgetPassword";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import ProfilePage from "../Pages/ProfilePage/ProfilePage";
 import UpdateProfile from "../Components/UpdateProfile/UpdateProfile";
+import Plants from "../Pages/Plants/Plants";
 
 export const router = createBrowserRouter([
   {
@@ -62,6 +63,12 @@ export const router = createBrowserRouter([
       {
         path: '/update',
         element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
+      },
+      {
+        path:"/plants",
+        Component: Plants,
+        loader: ()=>fetch('/plants.json'),
+        hydrateFallbackElement: <p>Loading....</p>
       }
     ],
   },

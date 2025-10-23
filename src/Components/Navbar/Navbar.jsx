@@ -6,11 +6,11 @@ import AuthContext from '../../Provider/AuthContext/AuthContext';
 import Loading from '../Loading/Loading';
 
 const Navbar = () => {
-  const {user,logOut}=useContext(AuthContext);
-  // if(user){
+  const {user,logOut,loading}=useContext(AuthContext);
+  // if(loading){
   //  return <Loading></Loading>
   //  }
-  //console.log(user);
+  console.log(loading);
   const handleLogout =()=>{
     logOut();
   }
@@ -48,7 +48,7 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">GreenNest</a>
+        <Link to="/" className="btn btn-ghost bg-green-100 text-xl">GreenNest</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

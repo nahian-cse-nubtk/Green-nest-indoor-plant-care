@@ -9,12 +9,12 @@ const UpdateProfile = () => {
     const photoRef = useRef();
     const navigate = useNavigate();
     const [error,setError]=useState("")
-    const {user, updateUser}=useContext(AuthContext);
-    if(!user){
-        return <Loading></Loading>
-    }
-    const userData = user.providerData[0];
-    
+    const {user, updateUser,setLoadingNav}=useContext(AuthContext);
+    // if(!user){
+    //     return <Loading></Loading>
+    // }
+    const userData = user
+
 
 
     const handleUpdate =(e)=>{
@@ -26,6 +26,7 @@ const UpdateProfile = () => {
         .then(()=>{
             toast('profile is updated')
             navigate('/profile');
+            setLoadingNav(true);
 
         })
         .catch(error=>{

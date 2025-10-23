@@ -3,7 +3,8 @@ import { Link } from "react-router";
 import AuthContext from "../../Provider/AuthContext/AuthContext";
 
 const ProfilePage = () => {
-    const {user}=useContext(AuthContext);
+    const {user,setLoadingNav}=useContext(AuthContext);
+    setLoadingNav(false);
     const userData = user.providerData[0];
     //console.log(user);
   return (
@@ -19,7 +20,7 @@ const ProfilePage = () => {
 
         {/* Name */}
         <h2 className="text-2xl font-bold mt-5 text-green-700">
-          {userData.displayName}
+          {user.displayName}
         </h2>
 
         {/* Email */}

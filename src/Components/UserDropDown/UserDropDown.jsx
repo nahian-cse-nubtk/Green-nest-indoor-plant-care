@@ -1,11 +1,20 @@
 import { useState } from "react";
 import { ChevronDown, LogOut } from "lucide-react";
+import AuthContext from "../../Provider/AuthContext/AuthContext";
+import Loading from "../Loading/Loading";
 
 const UserDropdown = ({ user, handleLogout }) => {
 
   const [open, setOpen] = useState(false);
+
+    //const{loading}=useContext(AuthContext);
+    // if(loading){
+
+    //     return <Loading></Loading>
+    // }
+
   const userData = user.providerData[0]
-  console.log(userData);
+  console.log(user);
 
 
   //if (!user) return null; // if no user logged in, don't show dropdown
@@ -35,7 +44,7 @@ const UserDropdown = ({ user, handleLogout }) => {
       {open && (
         <div className="absolute right-0 mt-2 w-44 bg-white border border-gray-200 rounded-xl shadow-lg z-50">
           <div className="px-4 py-2 text-sm text-gray-700 border-b">
-            <p className="font-semibold">{userData.displayName}</p>
+            <p className="font-semibold">{user.displayName}</p>
             <p className="text-xs text-gray-500">{userData.email}</p>
           </div>
           <button

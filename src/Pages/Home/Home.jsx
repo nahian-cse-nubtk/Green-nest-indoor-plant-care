@@ -4,6 +4,7 @@ import PlantSlider from '../../Components/PlantSlider/PlantSlider';
 import TopRatedPlants from '../../Components/TopRatedPlants/TopRatedPlants';
 import PlantCareTips from '../../Components/PlantCareTips/PlantCareTips';
 import PlantExperts from '../../Components/PlantExperts/PlantExperts';
+import PlantOfTheWeek from '../../Components/PlantOfTheWeek/PlantOfTheWeek';
 
 const Home = () => {
     const {plants,careTips,experts} = useLoaderData();
@@ -23,6 +24,9 @@ const Home = () => {
             </div>
             <div>
                 <PlantExperts experts={experts}></PlantExperts>
+            </div>
+            <div>
+                <PlantOfTheWeek></PlantOfTheWeek>
             </div>
 
         </div>

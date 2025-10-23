@@ -7,13 +7,14 @@ import GoogleProvider from '../GoogleProvider/GoogleProvider';
 const AuthProvider = ({children}) => {
     const [user,setUser]=useState(null);
     const [loading, setLoading] = useState(true)
+    const [loadingNav, setLoadingNav] = useState(false)
 
     const createUser =(email,password)=>{
-        setLoading(true);
+        //setLoading(true);
         return createUserWithEmailAndPassword(auth,email,password)
     }
     const updateUser=(name,photoURL)=>{
-        setLoading(true);
+        //setLoading(true);
         return updateProfile(auth.currentUser,{
             displayName: name,
             photoURL: photoURL
@@ -28,11 +29,11 @@ const AuthProvider = ({children}) => {
         return signInWithPopup(auth,GoogleProvider)
     }
     const forgetPassword =(email)=>{
-        setLoading(true);
+
         return sendPasswordResetEmail(auth,email)
     }
     const logOut=()=>{
-        setLoading(true);
+        setLoading(false);
         return signOut(auth);
     }
 
@@ -59,7 +60,9 @@ const AuthProvider = ({children}) => {
         forgetPassword,
         logOut,
         loading,
-        setLoading
+        setLoading,
+        loadingNav,
+        setLoadingNav
 
     }
 

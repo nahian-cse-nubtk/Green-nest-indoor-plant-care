@@ -5,7 +5,7 @@ const UserDropdown = ({ user, handleLogout }) => {
 
   const [open, setOpen] = useState(false);
   const userData = user.providerData[0]
-  console.log(userData,handleLogout);
+  console.log(userData);
 
 
   //if (!user) return null; // if no user logged in, don't show dropdown
@@ -23,7 +23,7 @@ const UserDropdown = ({ user, handleLogout }) => {
           className="w-8 h-8 rounded-full object-cover border"
         />
         <span className="text-sm font-medium text-gray-700 hidden sm:inline">
-          {userData.displayName}
+          {user.displayName}
         </span>
         <ChevronDown
           size={18}

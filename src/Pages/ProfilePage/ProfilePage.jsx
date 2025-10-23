@@ -30,10 +30,10 @@ const ProfilePage = () => {
 
         {/* Profile Info */}
         <div className="text-left space-y-3">
-          <p>
+          {/* <p>
             <span className="font-semibold text-green-700">UID: {userData.uid}</span>{" "}
             {/* <span className="text-gray-700 text-sm">1234567890</span> */}
-          </p>
+          {/* </p> */}
           <p>
             <span className="font-semibold text-green-700">Email Verified:</span>{" "}
             <span className="text-green-600 font-medium">{user.emailVerified?'Yes ✅':"No"}</span>

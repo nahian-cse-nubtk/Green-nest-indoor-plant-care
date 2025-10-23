@@ -2,6 +2,7 @@ import React, { useContext, useRef, useState } from 'react';
 import AuthContext from '../../Provider/AuthContext/AuthContext';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router';
+import Loading from '../Loading/Loading';
 
 const UpdateProfile = () => {
     const nameRef = useRef();
@@ -10,9 +11,10 @@ const UpdateProfile = () => {
     const [error,setError]=useState("")
     const {user, updateUser}=useContext(AuthContext);
     if(!user){
-        return <p>Loading...</p>
+        return <Loading></Loading>
     }
     const userData = user.providerData[0];
+    
 
 
     const handleUpdate =(e)=>{

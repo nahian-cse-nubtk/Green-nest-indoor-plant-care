@@ -10,6 +10,7 @@ import ProfilePage from "../Pages/ProfilePage/ProfilePage";
 import UpdateProfile from "../Components/UpdateProfile/UpdateProfile";
 import Plants from "../Pages/Plants/Plants";
 import UserDropdown from "../Components/UserDropDown/UserDropDown";
+import Loading from "../Components/Loading/Loading";
 
 export const router = createBrowserRouter([
   {
@@ -33,7 +34,7 @@ export const router = createBrowserRouter([
 
           return { plants, careTips,experts };
         },
-        hydrateFallbackElement: <p>loading...</p>,
+        hydrateFallbackElement: <Loading></Loading>,
       },
       {
         path: '/plant/:id',
@@ -41,7 +42,7 @@ export const router = createBrowserRouter([
         element: <PrivateRoute>
           <PlantDetails></PlantDetails>
         </PrivateRoute>,
-        hydrateFallbackElement: <p>Loading...</p>
+        hydrateFallbackElement: <Loading></Loading>
       },
       {
         path: "/login",
@@ -69,12 +70,9 @@ export const router = createBrowserRouter([
         path:"/plants",
         Component: Plants,
         loader: ()=>fetch('/plants.json'),
-        hydrateFallbackElement: <p>Loading....</p>
+        hydrateFallbackElement: <Loading></Loading>
       },
-      {
-        path:'/dropdown',
-        Component: UserDropdown
-      }
+
     ],
   },
 ]);

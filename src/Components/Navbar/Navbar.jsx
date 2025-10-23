@@ -3,12 +3,13 @@ import { Link, NavLink } from 'react-router';
 import "./Navbar.css"
 import UserDropdown from '../UserDropDown/UserDropDown';
 import AuthContext from '../../Provider/AuthContext/AuthContext';
+import Loading from '../Loading/Loading';
 
 const Navbar = () => {
   const {user,logOut}=useContext(AuthContext);
-  // if(!user){
-  //   return <p>loading..</p>
-  // }
+  // if(user){
+  //  return <Loading></Loading>
+  //  }
   //console.log(user);
   const handleLogout =()=>{
     logOut();
@@ -56,7 +57,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        
+
         {
 
          user?<UserDropdown user={user} handleLogout={handleLogout}></UserDropdown>:

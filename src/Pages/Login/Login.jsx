@@ -1,11 +1,14 @@
 import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import AuthContext from '../../Provider/AuthContext/AuthContext';
+import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
 
 const Login = () => {
+
   const {signIn,signInWithGoogle}=useContext(AuthContext)
   const navigate =useNavigate();
   const [error, setError]=useState("")
+  const [show, setShow]=useState(true)
   //console.log(signInWithGoogle);
   const handleLogin=(e)=>{
     e.preventDefault();
@@ -47,9 +50,14 @@ const Login = () => {
        <form onSubmit={handleLogin}>
          <fieldset className="fieldset">
           <label className="label">Email</label>
-          <input name='email' type="email" className="input" placeholder="Email" />
+          <input required name='email' type="email" className="input" placeholder="Email" />
           <label className="label">Password</label>
-          <input name='password' type="password" className="input" placeholder="Password" />
+          <input required name='password' type={show?"password":"text"} className="input" placeholder="Password" />
+          <div className='relative'>
+
+              <p onClick={()=>setShow(!show)} className='absolute left-72 -top-9 '>{show?<FaRegEye size={20}/>:<FaRegEyeSlash size={20}/>}</p>
+
+          </div>
            {
             error&&<p className='text-red-300'>Invalid email and password</p>
            }

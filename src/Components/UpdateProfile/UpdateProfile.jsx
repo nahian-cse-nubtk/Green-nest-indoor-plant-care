@@ -1,6 +1,38 @@
-import React from 'react';
+import React, { useContext, useRef, useState } from 'react';
+import AuthContext from '../../Provider/AuthContext/AuthContext';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router';
 
 const UpdateProfile = () => {
+    const nameRef = useRef();
+    const photoRef = useRef();
+    const navigate = useNavigate();
+    const [error,setError]=useState("")
+    const {user, updateUser}=useContext(AuthContext);
+    if(!user){
+        return <p>Loading...</p>
+    }
+    const userData = user.providerData[0];
+
+
+    const handleUpdate =(e)=>{
+        e.preventDefault();
+        const name = nameRef.current.value;
+        const photoURL = photoRef.current.value;
+
+        updateUser(name,photoURL)
+        .then(()=>{
+            toast('profile is updated')
+            navigate('/profile');
+
+        })
+        .catch(error=>{
+            setError(error.message)
+
+        })
+
+        //console.log(name,photoURL);
+    }
     return (
         <div className="min-h-screen">
   <div className="hero-content flex-col">
@@ -10,21 +42,21 @@ const UpdateProfile = () => {
     </div>
     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
       <div className="p-5">
-       <form>
+       <form onSubmit={handleUpdate}>
          <fieldset className="fieldset">
           <label className="label">Name</label>
-          <input required type="text" name='name' className="input" placeholder="Name" />
+          <input ref={nameRef} defaultValue={userData.displayName||""} type="text" name='name' className="input" placeholder="Name" />
           <label className="label">Photo URL</label>
-          <input required type="text" name='photoURL' className="input" placeholder="PhotoURL" />
-          <label className="label">Email</label>
-          <input required name="email" type="email" className="input" placeholder="Email" />
-          <label className="label">Password</label>
-          <input required name='password' type="password" className="input" placeholder="Password" />
+          <input ref={photoRef} defaultValue={userData.photoURL||""} type="text" name='photoURL' className="input" placeholder="PhotoURL" />
+
 
 
           <button className="btn btn-neutral mt-4">Update</button>
         </fieldset>
        </form>
+       {
+        error&&<p className='text-red-300'>{error}</p>
+       }
 
       </div>
     </div>

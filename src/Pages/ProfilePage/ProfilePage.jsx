@@ -1,24 +1,29 @@
+import { useContext } from "react";
 import { Link } from "react-router";
+import AuthContext from "../../Provider/AuthContext/AuthContext";
 
 const ProfilePage = () => {
+    const {user}=useContext(AuthContext);
+    const userData = user.providerData[0];
+    //console.log(user);
   return (
     <div className="min-h-screen flex items-center justify-center bg-linear-to-b from-green-50 to-green-100 p-6">
       <div className="bg-white shadow-lg rounded-3xl p-8 w-full max-w-md text-center border border-green-100">
 
         {/* Profile Image */}
         <img
-          src="https://cdn-icons-png.flaticon.com/512/219/219969.png"
+          src={userData.photoURL}
           alt="User Avatar"
           className="w-32 h-32 mx-auto rounded-full border-4 border-green-300 object-cover shadow-md"
         />
 
         {/* Name */}
         <h2 className="text-2xl font-bold mt-5 text-green-700">
-          Shaikh Al Nahian
+          {userData.displayName}
         </h2>
 
         {/* Email */}
-        <p className="text-gray-500 text-sm mt-1">nahian@example.com</p>
+        <p className="text-gray-500 text-sm mt-1">{userData.email}</p>
 
         {/* Divider */}
         <div className="my-6 border-t border-green-200"></div>
@@ -26,12 +31,12 @@ const ProfilePage = () => {
         {/* Profile Info */}
         <div className="text-left space-y-3">
           <p>
-            <span className="font-semibold text-green-700">UID:</span>{" "}
-            <span className="text-gray-700 text-sm">1234567890</span>
+            <span className="font-semibold text-green-700">UID: {userData.uid}</span>{" "}
+            {/* <span className="text-gray-700 text-sm">1234567890</span> */}
           </p>
           <p>
             <span className="font-semibold text-green-700">Email Verified:</span>{" "}
-            <span className="text-green-600 font-medium">Yes ✅</span>
+            <span className="text-green-600 font-medium">{user.emailVerified?'Yes ✅':"No"}</span>
           </p>
         </div>
 

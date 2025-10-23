@@ -9,6 +9,7 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import ProfilePage from "../Pages/ProfilePage/ProfilePage";
 import UpdateProfile from "../Components/UpdateProfile/UpdateProfile";
 import Plants from "../Pages/Plants/Plants";
+import UserDropdown from "../Components/UserDropDown/UserDropDown";
 
 export const router = createBrowserRouter([
   {
@@ -69,6 +70,10 @@ export const router = createBrowserRouter([
         Component: Plants,
         loader: ()=>fetch('/plants.json'),
         hydrateFallbackElement: <p>Loading....</p>
+      },
+      {
+        path:'/dropdown',
+        Component: UserDropdown
       }
     ],
   },

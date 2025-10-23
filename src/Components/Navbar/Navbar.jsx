@@ -1,8 +1,19 @@
-import React from 'react';
-import { NavLink } from 'react-router';
+import React, { useContext } from 'react';
+import { Link, NavLink } from 'react-router';
 import "./Navbar.css"
+import UserDropdown from '../UserDropDown/UserDropDown';
+import AuthContext from '../../Provider/AuthContext/AuthContext';
 
 const Navbar = () => {
+  const {user,logOut}=useContext(AuthContext);
+  // if(!user){
+  //   return <p>loading..</p>
+  // }
+  //console.log(user);
+  const handleLogout =()=>{
+    logOut();
+  }
+
     const links =<>
     <li><NavLink to="/">Home</NavLink></li>
     <li><NavLink to="/plants">Plants</NavLink></li>
@@ -45,7 +56,16 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        
+        {
+
+         user?<UserDropdown user={user} handleLogout={handleLogout}></UserDropdown>:
+         <div className='flex gap-2'>
+          <Link to="/register"><button className='btn bg-green-100'>Register</button></Link>
+          <Link to="/login"><button className='btn bg-green-100'>Login</button></Link>
+
+         </div>
+        }
       </div>
     </div>
     );

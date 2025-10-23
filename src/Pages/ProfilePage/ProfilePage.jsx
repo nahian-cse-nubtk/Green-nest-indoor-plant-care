@@ -12,7 +12,7 @@ const ProfilePage = () => {
 
         {/* Profile Image */}
         <img
-          src={userData.photoURL}
+          src={user.photoURL}
           alt="User Avatar"
           className="w-32 h-32 mx-auto rounded-full border-4 border-green-300 object-cover shadow-md"
         />

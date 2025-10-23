@@ -1,13 +1,19 @@
 import React from "react";
 import { CiDollar } from "react-icons/ci";
 import Consultation from "../Consultation/Consultation";
+import { useNavigate } from "react-router";
 
 const PlantDetail = ({ plant }) => {
+  const navigate = useNavigate();
+  const handleBack=()=>{
+    navigate(-1)
+
+  }
   return (
    <div className="">
      <div className="card bg-base-100 w-200 shadow-sm p-5">
       <figure>
-        <img className="w-100 h-100" src={plant.image} alt="plant image" />
+        <img className="w-200 h-100" src={plant.image} alt="plant image" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">
@@ -29,7 +35,7 @@ const PlantDetail = ({ plant }) => {
         </div>
         <p className="text-xl text-justify"><span className="font-bold">Description: </span>{plant.description}</p>
         <div className="card-actions justify-end">
-          {/* <button className="btn btn-primary">Buy Now</button> */}
+          <button onClick={handleBack} className="btn text-xl bg-green-200">Back</button>
         </div>
       </div>
     </div>

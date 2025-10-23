@@ -26,9 +26,9 @@ const Consultation = () => {
         <form onSubmit={handleSubmit} >
             <fieldset className="fieldset">
           <label className="label">Name</label>
-          <input name='name' type="text" className="input" placeholder="Name" />
+          <input required name='name' type="text" className="input" placeholder="Name" />
           <label className="label">Email</label>
-          <input name='email' type="email" className="input" placeholder="Email" />
+          <input required name='email' type="email" className="input" placeholder="Email" />
 
           <button className="btn btn-neutral mt-4">Book Now</button>
         </fieldset>

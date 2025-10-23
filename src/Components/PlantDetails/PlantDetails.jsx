@@ -10,7 +10,7 @@ const PlantDetails = () => {
   const plant = loadedData.filter((data) => data.plantId == id);
 
   return (
-  <div className="flex justify-center my-10">
+  <div className="flex justify-center py-10 bg-green-100">
     <PlantDetail plant={plant[0]}></PlantDetail>
   </div>
   );

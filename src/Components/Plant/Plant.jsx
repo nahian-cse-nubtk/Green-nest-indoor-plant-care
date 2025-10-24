@@ -13,17 +13,17 @@ const navigate = useNavigate();
       <figure>
         <img className="object-fill"
           src={plant.image}
-          alt="Shoes"
+          alt="plant image"
         />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{plant.plantName}</h2>
         <div className="text-xl flex justify-between items-center">
-            <div className="bg-gray-200 px-3 py-2">
+            <div className="bg-green-200 px-3 py-2 rounded-md">
             <p>{plant.rating} M</p>
             </div>
-            <div className="bg-gray-200 px-3 py-2">
-            <p className="flex items-center gap-1"><CiDollar></CiDollar> {plant.price}</p>
+            <div className="bg-green-200 px-3 py-2 rounded-md">
+            <p className="flex items-center gap-1 "><CiDollar></CiDollar> {plant.price}</p>
             </div>
         </div>
         <div className="card-actions justify-start">

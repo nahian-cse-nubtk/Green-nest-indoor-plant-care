@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router';
 import PlantSlider from '../../Components/PlantSlider/PlantSlider';
 import TopRatedPlants from '../../Components/TopRatedPlants/TopRatedPlants';
 import PlantCareTips from '../../Components/PlantCareTips/PlantCareTips';
 import PlantExperts from '../../Components/PlantExperts/PlantExperts';
 import PlantOfTheWeek from '../../Components/PlantOfTheWeek/PlantOfTheWeek';
+import AuthContext from '../../Provider/AuthContext/AuthContext';
 
 const Home = () => {
     const {plants,careTips,experts} = useLoaderData();
+    
+
 
     //console.log(plants);
     return (

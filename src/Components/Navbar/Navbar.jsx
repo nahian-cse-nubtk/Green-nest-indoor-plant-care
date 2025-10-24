@@ -1,18 +1,23 @@
 import React, { useContext } from 'react';
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink, useNavigate } from 'react-router';
 import "./Navbar.css"
 import UserDropdown from '../UserDropDown/UserDropDown';
 import AuthContext from '../../Provider/AuthContext/AuthContext';
 import Loading from '../Loading/Loading';
 
 const Navbar = () => {
-  const {user,logOut,loading}=useContext(AuthContext);
+  const {user,logOut,setLoadingNav}=useContext(AuthContext);
   // if(loading){
   //  return <Loading></Loading>
   //  }
-  console.log(loading);
+  const navigate =useNavigate();
+ setLoadingNav(false);
+  //console.log(loading);
+
   const handleLogout =()=>{
     logOut();
+    navigate('/');
+
   }
 
     const links =<>

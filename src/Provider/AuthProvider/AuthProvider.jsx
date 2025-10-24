@@ -10,11 +10,12 @@ const AuthProvider = ({children}) => {
     const [loadingNav, setLoadingNav] = useState(false)
 
     const createUser =(email,password)=>{
-        //setLoading(true);
+        setLoading(true);
         return createUserWithEmailAndPassword(auth,email,password)
     }
     const updateUser=(name,photoURL)=>{
         //setLoading(true);
+        //console.log('update funcion is called');
         return updateProfile(auth.currentUser,{
             displayName: name,
             photoURL: photoURL
@@ -48,8 +49,8 @@ const AuthProvider = ({children}) => {
             unsubscribe()
         }
 
-    },[])
-    console.log(user);
+    },[children])
+    //console.log(user);
 
     const authInfo ={
         createUser,

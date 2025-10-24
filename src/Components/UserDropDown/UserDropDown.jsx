@@ -14,7 +14,7 @@ const UserDropdown = ({ user, handleLogout }) => {
     // }
 
   const userData = user.providerData[0]
-  console.log(user);
+  //console.log(user);
 
 
   //if (!user) return null; // if no user logged in, don't show dropdown
@@ -31,7 +31,7 @@ const UserDropdown = ({ user, handleLogout }) => {
           alt="User Avatar"
           className="w-8 h-8 rounded-full object-cover border"
         />
-        <span className="text-sm font-medium text-gray-700 hidden sm:inline">
+        <span className="text-sm font-medium text-green-700 hidden sm:inline">
           {user.displayName}
         </span>
         <ChevronDown
@@ -42,8 +42,8 @@ const UserDropdown = ({ user, handleLogout }) => {
 
       {/* Dropdown Menu */}
       {open && (
-        <div className="absolute right-0 mt-2 w-44 bg-white border border-gray-200 rounded-xl shadow-lg z-50">
-          <div className="px-4 py-2 text-sm text-gray-700 border-b">
+        <div className="absolute right-0 mt-2 w-60 bg-white border border-gray-200 rounded-xl shadow-lg z-50">
+          <div className="px-4 py-2 text-sm text-green-700 border-b">
             <p className="font-semibold">{user.displayName}</p>
             <p className="text-xs text-gray-500">{userData.email}</p>
           </div>

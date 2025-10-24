@@ -5,7 +5,7 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { toast } from "react-toastify";
 
 const Register = () => {
-  const { createUser, updateUser,signInWithGoogle } = useContext(AuthContext);
+  const { createUser, updateUser,signInWithGoogle,setLoadingNav } = useContext(AuthContext);
   const navigate = useNavigate();
   const [show, setShow]=useState(true);
   const [error, setError] = useState("");
@@ -35,21 +35,28 @@ const Register = () => {
     createUser(email, password)
       .then(() => {
         //console.log(result.user)
+        setLoadingNav(true);
+
+
+      updateUser(name, photoURL)
+      .then(() => {
+        //console.log("result update");
+        setLoadingNav(true);
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+
         navigate("/");
         toast("Registration Successfull and Please Login Now!");
 
       })
       .catch((error) => {
         setError(error.message);
+
       });
 
-    updateUser(name, photoURL)
-      .then(() => {
-        //console.log("result update");
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+
   };
   const handleGooglesignIn=()=>{
       signInWithGoogle()

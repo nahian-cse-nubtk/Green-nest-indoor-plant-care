@@ -43,7 +43,8 @@ export const router = createBrowserRouter([
         element: <PrivateRoute>
           <PlantDetails></PlantDetails>
         </PrivateRoute>,
-        hydrateFallbackElement: <Loading></Loading>
+        hydrateFallbackElement: <Loading></Loading>,
+        errorElement: <RouteError></RouteError>
       },
       {
         path: "/login",

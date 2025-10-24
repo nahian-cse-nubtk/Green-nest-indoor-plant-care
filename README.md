@@ -1,16 +1,34 @@
-# React + Vite
+# 🌿 GreenNest — Indoor Plant Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**GreenNest** is an elegant single-page web application built for plant lovers who want to nurture and decorate their homes with healthy indoor plants.
+The platform allows users to explore plant care guides, buy plants, and book expert consultations — ensuring a greener and healthier living space during any season. 🍃
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- 🌱 **Beautiful UI** — Designed with Tailwind CSS & DaisyUI for a fresh, nature-inspired look.
+- 🪴 **Explore Indoor Plants** — Browse curated plant collections with detailed care information.
+- 💧 **Care Tips Section** — Watering, sunlight, and fertilizing guidance for every plant.
+- 👩‍🌾 **Plant Experts** — Meet plant specialists and book consultations.
+- 🔐 **Firebase Authentication** — Secure sign-in/sign-up with Google and email/password.
+- 🪶 **Smooth Animations** — Framer Motion provides elegant transitions and micro-interactions.
+- 🔔 **React Toast Notifications** — Friendly alerts for actions (e.g., login, add to cart).
+- 🌍 **Responsive Design** — Fully responsive on desktop, tablet, and mobile devices.
+- 💬 **Dynamic Routing** — Powered by React Router for a seamless single-page experience.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧠 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Category | Technology |
+|-----------|-------------|
+| **Frontend** | React (v19+), React Router |
+| **Styling** | Tailwind CSS, DaisyUI |
+| **Icons** | React Icons, Lucide React |
+| **Animation** | Framer Motion |
+| **Authentication** | Firebase Auth |
+| **Notifications** | React Toastify |
+| **Deployment** | Firebase Hosting |
+
+---

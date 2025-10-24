@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import AuthContext from '../../Provider/AuthContext/AuthContext';
 import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 const Login = () => {
 
@@ -17,9 +18,10 @@ const Login = () => {
     const email = e.target.email.value;
     const password =e.target.password.value;
     signIn(email,password)
-    .then(result=>{
+    .then(()=>{
       //console.log(result)
       navigate(location.state||'/');
+      toast("Login Successfull");
     })
     .catch(error=>{
       setError(error.message);
@@ -30,13 +32,14 @@ const Login = () => {
   }
   const handleGooglesignIn=()=>{
     signInWithGoogle()
-    .then(result=>{
+    .then(()=>{
       //console.log(result)
       navigate(location.state||"/")
+      toast("Login Successfull");
 
     })
     .catch(error=>{
-      console.log(error)
+      setError(error.message);
     })
 
   }
@@ -58,7 +61,7 @@ const Login = () => {
           <input required name='password' type={show?"password":"text"} className="input" placeholder="Password" />
           <div className='relative'>
 
-              <p onClick={()=>setShow(!show)} className='absolute left-72 -top-9 '>{show?<FaRegEye size={20}/>:<FaRegEyeSlash size={20}/>}</p>
+              <p onClick={()=>setShow(!show)} className='absolute left-65 md:left-72 -top-9 '>{show?<FaRegEye size={20}/>:<FaRegEyeSlash size={20}/>}</p>
 
           </div>
            {
@@ -101,7 +104,7 @@ const Login = () => {
             </button>
        </div>
        <div>
-        <p>Don't have an account? <Link className='text-green-300' to="/register">SignUp</Link></p>
+        <p className='mt-5'>Don't have an account? <Link className='text-green-600' to="/register">SignUp</Link></p>
        </div>
       </div>
     </div>

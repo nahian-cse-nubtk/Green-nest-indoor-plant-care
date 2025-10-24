@@ -8,7 +8,7 @@ const Plants = () => {
     return (
         <div>
         <h1 className='text-center text-4xl font-bold my-5'>All Indoor Plants</h1>
-        <div className='grid grid-cols-1 md:grid-cols-3 mx-20 gap-3 my-10'>
+        <div className='grid grid-cols-1 md:grid-cols-3 mx-3 md:mx-20 gap-3 my-10'>
             {
                 plantsData.map(plant=><Plant plant={plant}></Plant>)
             }

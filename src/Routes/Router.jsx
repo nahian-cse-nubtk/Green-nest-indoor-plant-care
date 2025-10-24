@@ -11,6 +11,7 @@ import UpdateProfile from "../Components/UpdateProfile/UpdateProfile";
 import Plants from "../Pages/Plants/Plants";
 import UserDropdown from "../Components/UserDropDown/UserDropDown";
 import Loading from "../Components/Loading/Loading";
+import RouteError from "../Components/RouteError/RouteError";
 
 export const router = createBrowserRouter([
   {
@@ -72,7 +73,12 @@ export const router = createBrowserRouter([
         loader: ()=>fetch('/plants.json'),
         hydrateFallbackElement: <Loading></Loading>
       },
+      {
+        path:"*",
+        Component: RouteError
+      }
 
     ],
   },
+
 ]);

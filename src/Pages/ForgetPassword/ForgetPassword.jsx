@@ -12,8 +12,8 @@ const ForgetPassword = () => {
         //console.log(email);
         forgetPassword(email)
         .then(()=>{
-            console.log("password reset email sent")
-            toast("Password reset email sent and check your email")
+            //console.log("password reset email sent")
+            toast("Email sent and check your email inbox or spam");
         })
         .catch(error=>{
             setError(error.message);

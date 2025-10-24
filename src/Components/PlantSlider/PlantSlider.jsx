@@ -94,13 +94,13 @@ const PlantSlider = ({ plants }) => {
           onClick={prevSlide}
           className="bg-black/30 hover:bg-black/50 p-3 rounded-full"
         >
-          {<MdOutlineKeyboardArrowLeft />}
+          {<MdOutlineKeyboardArrowLeft size={50}/>}
         </button>
         <button
           onClick={nextSlide}
           className="bg-black/30 hover:bg-black/50 p-3 rounded-full"
         >
-          {<MdOutlineKeyboardArrowRight />}
+          {<MdOutlineKeyboardArrowRight size={50} />}
         </button>
       </div>
     </div>

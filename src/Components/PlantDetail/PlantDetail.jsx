@@ -11,21 +11,21 @@ const PlantDetail = ({ plant }) => {
   }
   return (
    <div className="">
-     <div className="card bg-base-100 w-200 shadow-sm p-5">
+     <div className="card bg-base-100 w-76 md:w-200 shadow-sm p-5">
       <figure>
-        <img className="w-200 h-100" src={plant.image} alt="plant image" />
+        <img className=" w-74 md:w-200 h-74 md:h-100" src={plant.image} alt="plant image" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">
           <span>PlantName: </span>
           {plant.plantName}
         </h2>
-        <div className="text-xl flex justify-between items-center">
+        <div className="text-xl flex flex-col md:flex-row gap-y-2 md:gap-y-0 justify-between items-start md:items-center">
           <div className="bg-gray-200 px-3 py-2">
             <p><span>Rating: </span>{plant.rating} M</p>
           </div>
           <div className="bg-gray-200 px-3 py-2">
-            <p className="flex items-center gap-1"><span>Price: </span>
+            <p className="flex  items-center gap-1"><span>Price: </span>
               <CiDollar></CiDollar> {plant.price}
             </p>
           </div>

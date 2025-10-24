@@ -1,7 +1,8 @@
 import React, { useContext, useState } from "react";
 import AuthContext from "../../Provider/AuthContext/AuthContext";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const { createUser, updateUser } = useContext(AuthContext);
@@ -32,9 +33,11 @@ const Register = () => {
       setError("");
     }
     createUser(email, password)
-      .then((result) => {
+      .then(() => {
         //console.log(result.user)
         navigate("/");
+        toast("Registration Successfull and Login Now! Please");
+
       })
       .catch((error) => {
         setError(error.message);
@@ -42,7 +45,7 @@ const Register = () => {
 
     updateUser(name, photoURL)
       .then(() => {
-        console.log("result update");
+        //console.log("result update");
       })
       .catch((error) => {
         setError(error.message);
@@ -92,7 +95,7 @@ const Register = () => {
                 <div className="relative">
                   <p
                     onClick={() => setShow(!show)}
-                    className="absolute left-72 -top-9 "
+                    className="absolute left-65 md:left-72 -top-9 "
                   >
                     {show ? <FaRegEye size={20} /> : <FaRegEyeSlash size={20}/>}
                   </p>
@@ -102,6 +105,7 @@ const Register = () => {
                 <button className="btn btn-neutral mt-4">Register</button>
               </fieldset>
             </form>
+            <p className="mt-5">Already have an accout? please <Link className="text-green-600 underline" to="/login">LogIn</Link></p>
           </div>
         </div>
       </div>

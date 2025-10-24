@@ -27,6 +27,7 @@ const UpdateProfile = () => {
             toast('profile is updated')
             navigate('/profile');
             setLoadingNav(true);
+            
 
         })
         .catch(error=>{

@@ -1,10 +1,13 @@
 import React, { useContext, useState } from 'react';
 import AuthContext from '../../Provider/AuthContext/AuthContext';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router';
 
 const ForgetPassword = () => {
+
     const [error, setError]=useState("")
     const {forgetPassword}=useContext(AuthContext);
+    const navigate = useNavigate();
     //console.log(forgetPassword);
     const handleForgetPass=(e)=>{
         e.preventDefault();
@@ -13,7 +16,10 @@ const ForgetPassword = () => {
         forgetPassword(email)
         .then(()=>{
             //console.log("password reset email sent")
+
             toast("Email sent and check your email inbox or spam");
+            window.open("https://mail.google.com", "_blank", "noopener,noreferrer");
+            navigate('/');
         })
         .catch(error=>{
             setError(error.message);

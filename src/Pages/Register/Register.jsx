@@ -48,7 +48,7 @@ const Register = () => {
       });
 
         navigate("/");
-        toast("Registration Successfull and Please Login Now!");
+        toast("Registration Successfull");
 
       })
       .catch((error) => {
@@ -62,7 +62,7 @@ const Register = () => {
       signInWithGoogle()
       .then(()=>{
         //console.log(result)
-        navigate(location.state||"/")
+        navigate("/")
         toast("Login Successfull");
 
       })

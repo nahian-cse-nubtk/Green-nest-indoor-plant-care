@@ -6,7 +6,7 @@ const Consultation = () => {
         e.preventDefault();
         const email = e.target.email.value;
         const name = e.target.name.value;
-        console.log(name,email);
+        //console.log(name,email);
         e.target.reset();
         toast("Booking Successfull")
     }

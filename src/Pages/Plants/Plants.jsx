@@ -4,7 +4,7 @@ import Plant from '../../Components/Plant/Plant';
 
 const Plants = () => {
     const plantsData =useLoaderData();
-    console.log(plantsData)
+    //console.log(plantsData)
     return (
         <div>
         <h1 className='text-center text-4xl font-bold my-5'>All Indoor Plants</h1>

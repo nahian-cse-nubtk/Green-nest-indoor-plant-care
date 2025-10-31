@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+
 import { useLoaderData } from 'react-router';
 import PlantSlider from '../../Components/PlantSlider/PlantSlider';
 import TopRatedPlants from '../../Components/TopRatedPlants/TopRatedPlants';
@@ -9,7 +9,7 @@ import AuthContext from '../../Provider/AuthContext/AuthContext';
 
 const Home = () => {
     const {plants,careTips,experts} = useLoaderData();
-    
+
 
 
     //console.log(plants);

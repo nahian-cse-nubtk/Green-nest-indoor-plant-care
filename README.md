@@ -34,3 +34,24 @@ The platform allows users to explore plant care guides, buy plants, and book exp
 | **Deployment** | Firebase Hosting |
 
 ---
+🚀 How to Run This Project
+
+Follow the steps below after cloning the repository.
+
+🔽 1. Clone the Repository
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+
+🌐 Frontend Setup (React)
+6. Open a New Terminal & Go to Client Folder
+cd client
+
+7. Install Dependencies
+npm install
+
+8. Start the React App
+npm run dev
+
+✔️ Project will be Running At
+
+React App: http://localhost:3000

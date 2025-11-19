@@ -40,7 +40,6 @@ Follow the steps below steps:
 
 🔽 1. Clone the Repository
 git clone https://github.com/nahian-cse-nubtk/Green-nest-indoor-plant-care.git
-cd Green-nest-indoor-plant-care
 
 2. Open a New Terminal & Go to Client Folder
 cd client
